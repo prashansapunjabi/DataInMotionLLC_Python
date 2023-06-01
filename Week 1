@@ -1,0 +1,27 @@
+## Problem 1: Write a function that takes in an integer, minutes, and converts it into seconds
+# My approach: I have taken the input from the user as an argument for this problem. It helps the user to correct the mistake, if any, easily without having to run the code multiple times. Then I have returned the seconds as simply a multiple of 60.
+def convert_time(mins):
+    return mins*60
+
+## Problem 2: Write a function that takes two numbers as arguments and returns their sum
+# My approach: Here the numbers are summed up after being taken in as arguments.
+def sum_numbers(x,y):
+    return x+y
+
+## Problem 3: Create a function that takes a string and returns the number (count) of vowels contained within it.
+# My approach: Here I have made a list of vowels and compared it with the string input from the user. The comparing statement is within the return statement and this is a hassle free way of putting it down. It took some amount of research to come up with this statement but I have learned a new way to write a comparative 'if' with 'for' here.
+def count_vowels(string):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    return len([i for i in string if i in vowels])
+
+## Problem 4: "FizzBuzz" for 3 and 5
+# My approach: This is a simple if-elif-else loop which goes through all the arguments and prints the required statement. The important thing to note here is that I provided the 'and' condition before the others because Python usually tries to satisfy first conditions before it goes to the others. If I would've placed the 'and' condition anywhere later in the function, it wouldn't execute because Python would not let it reach there.
+def fizz_buzz(b):
+    if b%3 == 0 and b%5 == 0:
+        print("FizzBuzz")
+    elif b%5 == 0:
+        print("Buzz")
+    elif b%3 == 0:
+        print("Fizz")
+    else:
+        print(b)
