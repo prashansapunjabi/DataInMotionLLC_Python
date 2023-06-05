@@ -1,0 +1,35 @@
+## Problem 1: Create a function that takes two arguments - the original price and the discount percentage as integers and returns the final price after the discount.
+# My approach: Here I have returned the discounted price by first taking the original price and then subtracting the discount percentage from it.
+def discountedprice():
+    x = int(input("Enter product price: "))
+    y = float(input("Enter discount percentage: "))
+    z = (y/100)*x
+    return x-z
+discountedprice()
+
+## Problem 2: Create a function that takes the age in years and returns the age in days.
+# My aproach: This involves a simple return statement by multiplying with 365 in general as the problem demanded it. I understand that we are taking in just the age of the user and not their date of birth for this calculation.
+def age_days():
+    a = int(input("Enter age (years): "))
+    return a*365
+age_days()
+
+## Problem 3: Create a function that takes an angle in radians and returns the corresponding angle in degrees rounded to one decimal place
+# My approach: This task has been done using the math library from Python. It has a return statement using the function radians() to give the required output.
+import math
+def degrees_to_radians():
+    degree = float(input("Enter angle(degrees): "))
+    return math.radians(degree)
+degrees_to_radians()
+
+## Problem 4: Create a function, get_days, that takes two dates and returns the number of days between the first and second date
+# My approach: Here I have used the amazing capabilities of the datetime library. I have never used datetime to a great extent before but this time I read up on it. I specifically used the strptime() function to convert the string inputs to dates and have provided the the date format. You can read more on the datetime library here: https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior.
+from datetime import datetime, timedelta
+def get_days():
+    date1 = input("Enter first date in YYYY,MM,DD: ")
+    date1 = datetime.strptime(date1, "%Y-%m-%d")
+    date2 = input("Enter second date in YYYY,MM,DD: ")
+    date2 = datetime.strptime(date2, "%Y-%m-%d")
+    new_date = date2 - date1
+    return new_date.days
+get_days()
