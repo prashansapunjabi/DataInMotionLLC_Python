@@ -1,0 +1,10 @@
+## Create a function that takes in a current mood and return a sentence in the following format: “Today, I am feeling {mood}”. However, if no argument is passed, return “Today, I am feeling neutral”.
+# My approach: I have taken user input for the function asking how they are feeling. If the user replies then using the keyword "f" I have simply printed that feeling. However, in the case where the user does not reply, the IF condition checks and prints neutral.
+
+def feeling():
+    mood = input("How are you feeling today: ")
+    if mood == "":
+        print("Today, I'm feeling neutral.")
+    else:
+        print(f"Today, I'm feeling {mood}.")
+feeling()
