@@ -1,0 +1,28 @@
+## Problem 1: Write two functions:
+## to_int() : A function to convert a string to an integer.
+## to_str() : A function to convert an integer to a string.
+# My approach: Here the 2 functions take in integer and string values and convert them to string and integer respectively.
+def convert():
+    int_to_string = int(input("Enter integer values: "))
+    return str(int_to_string)
+convert()
+def convert1():
+    int_to_string = str(input("Enter string: "))
+    return int(int_to_string)
+convert1()
+
+### Problem 2: Create a function that takes a number as its only argument and returns True if it’s less than or equal to zero, otherwise return False.
+# My approach: Here the function takes in a number and compares it with 0 to give True or False.
+def torf(number):
+    if number <= 0:
+        print (True)
+    else:
+        print (False)
+
+### Problem 3: Create a function that takes two number strings and returns their sum as a string.
+# My approach: Here I have taken 2 numbers that are hard-coded as strings and returned sum of those after converting each to an integer.
+def sum_strings():
+    str1 = str(input("Enter first number: "))
+    str2 = str(input("Enter second number: "))
+    return int(str1) + int(str2)
+sum_strings()
