@@ -1,0 +1,30 @@
+WEEK 6
+## Problem: Create a function that returns True when num1 is equal to num2; otherwise return False.
+# My approach: Here I have written a function that checks whether the 2 numbers provided are equal or not and prints the result accordingly.
+
+def is_same_num(num1, num2):
+    if num1 == num2:
+        print(True)
+    else:
+        print(False)
+is_same_num(4,2)
+
+
+WEEK 7
+## Problem: Create a function that takes a list of dictionaries and returns the sum of people’s budgets.
+# Here, I took the help of ChatGPT to write down the function. This was mainly because in my version of the code, I was trying to take in the list of dictionaries from the user manually, through the function itself. Another thing I learned from the AI-generated code is the function '.get()'. Anyhow, I found the code below really clean and easy to understand. Hope you find it useful too.
+
+def sum_budgets(list_of_dictionaries):
+    budget_sum = 0
+    for person in list_of_dictionaries:
+        budget = person.get('budget')
+        if budget is not None:
+            budget_sum += budget
+    return budget_sum
+people = [
+    {'name': 'John', 'age': 30, 'budget': 1000},
+    {'name': 'Alice', 'age': 25, 'budget': 1500},
+    {'name': 'Bob', 'age': 35, 'budget': 2000},
+    {'name': 'Eve', 'age': 28}
+]
+sum_budgets(people)
