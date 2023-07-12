@@ -1,0 +1,23 @@
+## Problem: Create a function that takes in a string as an input. If the string starts with a vowel, return True. If not, return False.
+# My approach: Here I have compared the first letter of the string with a custom list containing vowels. This ingenuitive because we can provide any number of characters for the comparison.
+def is_vowel():
+    string = str(input("Enter word here: "))
+    vowels_list = ['a','e','i','o','u','A','E','I','O','U']
+    if string[0] in vowels_list:
+        print(True)
+    else:
+        print(False) 
+is_vowel()
+
+
+## Problem: Create a function that takes a string as input and capitalizes the string.
+# My approach: Here I have used 2 methods by which I can capitalize the string (or more appropriately change it to the proper case). The first method uses the capitalize() method whereas the second method uses string slicing. I found the second method really fun because I have used the string slicing technique after a really long time.
+def capitalize_string():
+    string_cap = str(input("Enter word here: "))
+    return string_cap.capitalize()
+capitalize_string()
+## OR
+def capitalize_string_2():
+    string_cap_2 = str(input("Enter word here: "))
+    return string_cap_2[0].upper() + string_cap_2[1:]
+capitalize_string_2()
